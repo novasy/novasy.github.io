@@ -229,29 +229,6 @@ html {-webkit-transition : -webkit-filter 300ms linear;}
       }
     }
   </script>
-  
-<script>
-    
-    document.addEventListener("DOMContentLoaded", function () {
-        const button = document.querySelector('button[wire\\:click="lookupGrades"]');
-        const input = document.getElementById("studentNumber");
-        const resultBox = document.getElementById("exam-result");
-    
-        button.addEventListener("click", function () {
-            const studentNo = input.value.trim();
-    
-            // Buraya kendi doğru numaranı ekleyebilirsin
-            const validNumber = "20244035005";
-    
-            if (studentNo === validNumber) {
-                resultBox.style.display = "block";
-            } else {
-                resultBox.style.display = "none";
-                alert("Geçersiz öğrenci numarası ya da sonuç bulunamadı.");
-            }
-        });
-    });
-    </script>
-    
+
 
 </body></html>
