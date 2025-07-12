@@ -1,234 +1,232 @@
 <!DOCTYPE html>
-<!-- saved from url=(0031)https://ydnot.nisantasi.edu.tr/ -->
-<html lang="tr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Not Sorgulama</title>
-    <!-- Livewire Styles --><style>[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}</style>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Not Sorgulama</title>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap" rel="stylesheet" />
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net/">
-    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet">
-    <link href="./Not Sorgulama_files/css" rel="stylesheet">
-
-    <!-- Styles / Scripts -->
-            <link rel="preload" as="style" href="./Not Sorgulama_files/app-Cwbh6SSI.css"><link rel="modulepreload" href="./Not Sorgulama_files/app-DNxiirP_.js.indir"><link rel="stylesheet" href="./Not Sorgulama_files/app-Cwbh6SSI.css" data-navigate-track="reload"><script type="module" src="./Not Sorgulama_files/app-DNxiirP_.js.indir" data-navigate-track="reload"></script>    <style>/* Make clicks pass-through */
-
-    #nprogress {
-      pointer-events: none;
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Instrument Sans', sans-serif;
+      margin: 0; padding: 0;
+      background: #f0f4f8;
     }
-
-    #nprogress .bar {
-      background: var(--livewire-progress-bar-color, #29d);
-
-      position: fixed;
-      z-index: 1031;
-      top: 0;
-      left: 0;
-
-      width: 100%;
-      height: 2px;
+    .container {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem;
     }
-    .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height)
-calc(2/1.5)
-);
+    footer {
+  flex-shrink: 0;
+  background: linear-gradient(90deg, #1e3a8a, #1e40af);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.875rem;
 }
-    /* Fancy blur effect */
-    #nprogress .peg {
-      display: block;
-      position: absolute;
-      right: 0px;
-      width: 100px;
-      height: 100%;
-      box-shadow: 0 0 10px var(--livewire-progress-bar-color, #29d), 0 0 5px var(--livewire-progress-bar-color, #29d);
-      opacity: 1.0;
-
-      -webkit-transform: rotate(3deg) translate(0px, -4px);
-          -ms-transform: rotate(3deg) translate(0px, -4px);
-              transform: rotate(3deg) translate(0px, -4px);
-    }
-    html, body {
-    margin: 0;
-    padding: 0;
-  }
-
-    /* Remove these to get rid of the spinner */
-    #nprogress .spinner {
-      display: block;
-      position: fixed;
-      z-index: 1031;
-      top: 15px;
-      right: 15px;
-    }
-
-    #nprogress .spinner-icon {
-      width: 18px;
-      height: 18px;
-      box-sizing: border-box;
-
-      border: solid 2px transparent;
-      border-top-color: var(--livewire-progress-bar-color, #29d);
-      border-left-color: var(--livewire-progress-bar-color, #29d);
-      border-radius: 50%;
-
-      -webkit-animation: nprogress-spinner 400ms linear infinite;
-              animation: nprogress-spinner 400ms linear infinite;
-    }
-
-    .nprogress-custom-parent {
-      overflow: hidden;
+    .banner {
       position: relative;
+      height: 200px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      margin-bottom: 2rem;
     }
-
-    .nprogress-custom-parent #nprogress .spinner,
-    .nprogress-custom-parent #nprogress .bar {
+    .banner img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .banner-overlay {
       position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(13,42,101,0.8), rgba(38,107,173,0.8), rgba(204,225,250,0.8));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      color: white;
     }
-
-    @-webkit-keyframes nprogress-spinner {
-      0%   { -webkit-transform: rotate(0deg); }
-      100% { -webkit-transform: rotate(360deg); }
+    .banner-overlay h1 {
+      font-weight: 800;
+      font-size: 1.8rem;
+      margin: 0;
+      background: linear-gradient(to right, #cde5f9, #8ebef1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    @keyframes nprogress-spinner {
-      0%   { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+    .banner-overlay img {
+      width: 120px;
+      height: auto;
+      filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));
     }
-    </style><style id="dark-reader-style" type="text/css">@media screen {
-html {-webkit-transition : -webkit-filter 300ms linear;}
-}</style></head>
-<body class="min-h-screen">
-<section wire:snapshot="{&quot;data&quot;:{&quot;studentNumber&quot;:&quot;&quot;,&quot;student&quot;:null,&quot;message&quot;:&quot;&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;4CJ6y29lR0TG1jyCYY4Y&quot;,&quot;name&quot;:&quot;grade-lookup&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;tr&quot;},&quot;checksum&quot;:&quot;6e456ba3b823c07cad0ccf4cc3c38180a42a9072b87ee8f7dd38692d1029742b&quot;}" wire:effects="[]" wire:id="4CJ6y29lR0TG1jyCYY4Y" class="max-w-4xl mx-auto pt-4 pb-8">
-    <!-- Banner Section -->
-    <div class="relative h-52 rounded-t-xl overflow-hidden mb-8 shadow-md">
-        <!-- Arka Plan Banner -->
-        <img src="./Not Sorgulama_files/photo-1523050854058-8df90110c9f1" alt="Eğitim Banner" class="w-full h-full object-cover">
+    .card {
+      background: rgba(255 255 255 / 0.9);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgb(0 0 0 / 0.1);
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      border: 1.5px solid #cbd5e1;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+    input[type="text"]:focus {
+      border-color: #3b82f6;
+      outline: none;
+      box-shadow: 0 0 5px #3b82f6aa;
+    }
+    button {
+      width: 100%;
+      background: linear-gradient(to right, #2563eb, #1d4ed8);
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #1d4ed8, #2563eb);
+    }
+    .result {
+      margin-top: 2rem;
+      display: none;
+      animation: fadeIn 0.3s ease forwards;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .result h2 {
+      color: #1e40af;
+      margin-bottom: 1rem;
+    }
+    .result .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .info-grid p {
+      margin: 0.2rem 0;
+      color: #555;
+    }
+    .result .pass {
+      background: #dcfce7;
+      border-left: 6px solid #22c55e;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      color: #166534;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .alert {
+      margin-top: 1rem;
+      color: #b91c1c;
+      font-weight: 600;
+      text-align: center;
+    }
+    footer {
+      margin-top: 4rem;
+      background: linear-gradient(90deg, #1e3a8a, #1e40af);
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Banner -->
+    <section class="banner">
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80" alt="Eğitim Banner" />
+      <div class="banner-overlay">
+        <h1>Exam Result Portal</h1>
+        <img src="./Not Sorgulama_files/nev.png" alt="Okul Logosu" />
+      </div>
+    </section>
 
-        <!-- Başlık + Logo Flex Konteyneri -->
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/80 to-blue-200/80 flex items-center justify-between px-4 sm:px-8 z-20">
-            <!-- Başlık -->
-            <div class="text-white">
-                <h1 class="text-lg sm:text-2xl md:text-4xl font-extrabold drop-shadow-md tracking-tight leading-snug">
-                <span class="inline-block bg-gradient-to-r from-blue-100 to-blue-300 bg-clip-text text-transparent">
-                    Exam Result Portal
-                </span>
-                </h1>
-                
-            </div>
+    <!-- Not Sorgulama Kart -->
+    <section class="card">
+      <label for="studentNumber">Student Number</label>
+      <input type="text" id="studentNumber" placeholder="Enter Your Student Number" />
 
-            <!-- Okul Logosu -->
-            <img src="./Not Sorgulama_files/nev.png" alt="Okul Logosu" class="absolute top-4 right-6 w-40 h-auto z-20 drop-shadow-lg">
+      <button id="lookupBtn">See Your Result</button>
+
+      <div class="alert" id="alertMsg" style="display:none;">Geçersiz öğrenci numarası ya da sonuç bulunamadı.</div>
+
+      <div class="result" id="examResult">
+        <h2>Student Information</h2>
+        <div class="info-grid">
+          <div>
+            <p><strong>Name Surname</strong></p>
+            <p id="studentName">ENEZ TOPUZLU</p>
+          </div>
+          <div>
+            <p><strong>Student Number</strong></p>
+            <p id="studentNo">20244035005</p>
+          </div>
         </div>
-    </div>
 
-
-    <!-- Ana Kart -->
-    <div class="bg-white/60 backdrop-blur-lg rounded-xl shadow-xl overflow-hidden -mt-16 mx-4 relative z-30 border border-white/30">
-        <div class="p-6 sm:p-8 pt-10">
-            <div class="flex items-center mb-6">
-                <div class="bg-blue-100 p-3 rounded-lg mr-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
-                    </svg>
-                </div>
-                <h2 class="text-2xl font-bold text-gray-800">See Your Result</h2>
-            </div>
-
-            <!-- Öğrenci Numarası Girişi -->
-            <div class="mb-6">
-                <label for="studentNumber" class="block text-sm font-medium text-gray-700 mb-2">Student Number</label>
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <input type="text" id="studentNumber" wire:model.live="studentNumber" wire:keydown.enter="lookupGrades" class="pl-10 w-full py-3 px-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200" placeholder="Enter Your Student Number">
-                </div>
-            </div>
-
-            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-
-            <button onclick="event.preventDefault(); lookupGradesHandler();" class="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium rounded-lg shadow-md transition duration-300 transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" wire:click.prevent="lookupGrades">
-                See Your Result
-              </button>              
-              
-            <div id="exam-result" style="display: none;">
-                <hr class="my-6">
-            
-                <div class="flex items-center mb-6 mt-8">
-                    <div class="bg-blue-100 p-3 rounded-lg mr-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
-                        </svg>
-                    </div>
-                    <h2 class="text-2xl font-bold text-gray-800">Student Information</h2>
-                </div>
-            
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                    <div>
-                        <p class="text-sm text-gray-500">Name Surname</p>
-                        <p class="text-lg font-semibold">ENEZ TOPUZLU</p>
-                    </div>
-                    <div>
-                        <p class="text-sm text-gray-500">Student Number</p>
-                        <p class="text-lg font-semibold">20244035005</p>
-                    </div>
-                </div>
-            
-                <div class="flex items-center mb-4 mt-6">
-                    <div class="bg-blue-100 p-3 rounded-lg mr-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6a3 3 0 013-3h9"></path>
-                        </svg>
-                    </div>
-                    <h2 class="text-2xl font-bold text-gray-800">NUEPT Results</h2>
-                </div>
-            
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="bg-green-100 text-green-800 p-6 rounded-lg shadow border-l-4 border-green-500">
-                        <p class="text-lg font-semibold">NUEPT Section 1</p>
-                        <span class="text-2xl font-bold text-green-600">Passed</span>
-                    </div>
-                    <div class="bg-green-100 text-green-800 p-6 rounded-lg shadow border-l-4 border-green-500">
-                        <p class="text-lg font-semibold">NUEPT Section 2</p>
-                        <span class="text-2xl font-bold text-green-600">Passed</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+        <h2>NUEPT Results</h2>
+        <div class="info-grid">
+          <div class="pass">
+            NUEPT Section 1: Passed
+          </div>
+          <div class="pass">
+            NUEPT Section 2: Passed
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
+  </div>
 
-<!-- Livewire Scripts -->
-<script src="./Not Sorgulama_files/livewire.js.indir" data-csrf="q9O7jQCF2OVkH7FDBBjjkbT4NrMaTzvWJqn597bw" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+  <footer>
+    © 2025 Nişantaşı Üniversitesi - Bilgi Teknolojileri Daire Başkanlığı - Tüm hakları saklıdır.
+  </footer>
 
-<footer class="mt-16 bg-gradient-to-r from-blue-900 to-blue-950 text-white px-6">
-
-    <!-- Alt Satır -->
-    <div class="border-t border-blue-800 py-10 text-center text-sm text-blue-300">
-        © 2025 Nişantaşı Üniversitesi - Bilgi Teknolojileri Daire Başkanlığı -  Tüm hakları saklıdır.
-    </div>
-</footer>
-<script>
-    function lookupGradesHandler() {
-      const input = document.getElementById("studentNumber");
-      const resultBox = document.getElementById("exam-result");
+  <script>
+    document.getElementById('lookupBtn').addEventListener('click', function() {
+      const input = document.getElementById('studentNumber');
+      const alertMsg = document.getElementById('alertMsg');
+      const examResult = document.getElementById('examResult');
       const studentNo = input.value.trim();
-      const validNumber = "20244035005"; // geçerli numarayı buraya yaz
-  
+      const validNumber = "20244035005"; // buraya geçerli öğrenci numarasını yazabilirsin
+
       if (studentNo === validNumber) {
-        resultBox.style.display = "block";
+        alertMsg.style.display = 'none';
+        examResult.style.display = 'block';
       } else {
-        resultBox.style.display = "none";
-        alert("Geçersiz öğrenci numarası ya da sonuç bulunamadı.");
+        examResult.style.display = 'none';
+        alertMsg.style.display = 'block';
       }
-    }
+    });
+
+    // Enter tuşu ile de sorgu yapılabilmesi için
+    document.getElementById('studentNumber').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        document.getElementById('lookupBtn').click();
+      }
+    });
   </script>
-
-
-</body></html>
+</body>
+</html>
